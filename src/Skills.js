@@ -1,69 +1,113 @@
 import React, { Component } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Icon from './Icon.js';
+import Container from 'react-bootstrap/Container'
 
 export default class Skills extends Component {
+    icons = [
+        {
+            id: 1,
+            title: 'html5',
+            icon: 'html5'
+        },
+        {
+            id: 2,
+            title: 'css',
+            icon: 'css3'
+        },
+        {
+            id: 3,
+            title: 'javascript',
+            icon: 'js'
+        },
+        {
+            id: 4,
+            title: 'bootstrap',
+            icon: 'bootstrap'
+        },
+        {
+            id: 5,
+            title: 'php',
+            icon: 'php'
+        },
+        {
+            id: 6,
+            title: 'java',
+            icon: 'java'
+        },
+        {
+            id: 7,
+            title: 'node',
+            icon: 'node-js'
+        },
+        {
+            id: 8,
+            title: 'git',
+            icon: 'github'
+        },
+        {
+            id: 9,
+            title: 'react',
+            icon: 'react'
+        },
+        {
+            id: 10,
+            title: 'angular',
+            icon: 'angular'
+        },
+        {
+            id: 11,
+            title: 'yarn',
+            icon: 'yarn'
+        },
+        {
+            id: 12,
+            title: 'npm',
+            icon: 'npm'
+        },
+        {
+            id: 13,
+            title: 'docker',
+            icon: 'docker'
+        },
+        {
+            id: 14,
+            title: 'devtools',
+            icon: 'chrome'
+        },
+        {
+            id: 15,
+            title: 'wordpress',
+            icon: 'wordpress'
+        },
+        {
+            id: 16,
+            title: 'scss',
+            icon: 'sass'
+        },
+        {
+            id: 17,
+            title: 'hacker news',
+            icon: 'hacker-news'
+        },
+        {
+            id: 18,
+            title: 'pied piper',
+            icon: 'pied-piper-hat'
+        },
+    ];
+
+
+
     render() {
         return (
-            <div className="container-fluid" style={{ backgroundColor: 'white' }}>
+            <Container fluid={true} style={{ backgroundColor: '#343A3F' }}>
                 <div style={{ height: '40px' }} />
                 <div className="container">
-                    <h1 className="text-center" style={{fontWeight: 900, color: '#343A3F'}}> languages + technologies </h1>
-                    <div style={{ height: '80px' }} />
-                    <div className="row">
-                        <div className="col" style={{ textAlign: 'center' }}>
-                            <FontAwesomeIcon icon={['fab', 'html5']} size={'3x'} color={'#7C9CAB'} />
-                            <p className="text-monospace">html</p>
-                        </div>
-                        <div className="col" style={{ textAlign: 'center' }}>
-                            <FontAwesomeIcon icon={['fab', 'css3']} size={'3x'}  color={'#7C9CAB'} />
-                            <p className="text-monospace">css</p>
-                        </div>
-                        <div className="col" style={{ textAlign: 'center' }}>
-                            <FontAwesomeIcon icon={['fab', 'js']} size={'3x'}  color={'#7C9CAB'} />
-                            <p className="text-monospace">javascript</p>
-                        </div>
-                        <div className="col" style={{ textAlign: 'center' }}>
-                            <FontAwesomeIcon icon={['fab', 'bootstrap']} size={'3x'}  color={'#7C9CAB'} />
-                            <p className="text-monospace">bootstrap</p>
-                        </div>
-                        <div className="col" style={{ textAlign: 'center' }}>
-                            <FontAwesomeIcon icon={['fab', 'php']} size={'3x'}  color={'#7C9CAB'} />
-                            <p className="text-monospace">php</p>
-                        </div>
-                        <div className="col" style={{ textAlign: 'center' }}>
-                            <FontAwesomeIcon icon={['fab', 'java']} size={'3x'}  color={'#7C9CAB'} />
-                            <p className="text-monospace">java</p>
-                        </div>
-                    </div>
-                    <div style={{ height: '80px' }} />
-                    <div className="row">
-                        <div className="col" style={{ textAlign: 'center' }}>
-                            <FontAwesomeIcon icon={['fab', 'node-js']} size={'3x'}  color={'#7C9CAB'} />
-                            <p className="text-monospace">node</p>
-                        </div>
-                        <div className="col" style={{ textAlign: 'center' }}>
-                            <FontAwesomeIcon icon={['fab', 'github']} size={'3x'}  color={'#7C9CAB'} />
-                            <p className="text-monospace">git</p>
-                        </div>
-                        <div className="col" style={{ textAlign: 'center' }}>
-                            <FontAwesomeIcon icon={['fab', 'react']} size={'3x'}  color={'#7C9CAB'} />
-                            <p className="text-monospace">react</p>
-                        </div>
-                        <div className="col" style={{ textAlign: 'center' }}>
-                            <FontAwesomeIcon icon={['fab', 'angular']} size={'3x'}  color={'#7C9CAB'} />
-                            <p className="text-monospace">angular</p>
-                        </div>
-                        <div className="col" style={{ textAlign: 'center' }}>
-                            <FontAwesomeIcon icon={['fab', 'yarn']} size={'3x'}  color={'#7C9CAB'} />
-                            <p className="text-monospace">yarn</p>
-                        </div>
-                        <div className="col" style={{ textAlign: 'center' }}>
-                            <FontAwesomeIcon icon={['fab', 'npm']} size={'3x'}  color={'#7C9CAB'} />
-                            <p className="text-monospace">npm</p>
-                        </div>
-                    </div>
+                    <h1 className="text-center" style={{ fontWeight: 900, color: 'white' }}> languages + technologies </h1>
+                    <div style={{ height: '40px' }} />
+                        <Icon icons={this.icons} />
                 </div>
-            </div>
+            </Container>
         )
     }
 }
