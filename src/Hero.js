@@ -100,7 +100,7 @@ export default class Hero extends Component {
                     <div className="container">
                         <ManSVG width={400} color={'#FEECC3'} colorHover={'white'} viewBox={'50 150 1310 770'} style={{marginLeft: 'calc(-200px + 50%)'}} />
                         <h1 className="display-4" style={{textAlign: 'center'}}>{'<'}<span style={{ fontWeight: 900 }}>coder</span>{' />'}</h1>
-                        <p className="lead" style={{textAlign: 'center'}}>Full-stack & front-end UI/UX developer.</p>
+                        <p className="lead" style={{textAlign: 'center'}}>full-stack & front-end UI/UX developer.</p>
                     </div>
                 </div>
             </div>
