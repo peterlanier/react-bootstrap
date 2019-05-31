@@ -1,0 +1,32 @@
+// https://www.canva.com/colors/color-palettes/vintage-village/
+$c-black: #333A44;
+$c-yellow: #FEECC3;
+$c-peach: #E8CBB1;
+$c-charcoal: #7C9CAB;
+
+
+$body-color: #666;
+$navbar-dark-brand-color: $c-yellow;
+$navbar-dark-color: $c-yellow;
+
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono|Rubik+Mono+One&display=swap');
+
+// $font-family-monospace: 'Roboto Mono', monospace;
+// $font-family-base: $font-family-monospace;
+.fancy{
+    font-family: 'Roboto Mono', monospace;
+}
+
+.jumbotron {
+//     background-image: url("./man.svg");
+//     background-size: contain;
+//     background-repeat: no-repeat;
+//     background-position: right;
+padding-top: 0px !important;
+padding-bottom: 0px !important;
+color: #343A3F;
+}
+
+
+
+@import '~bootstrap/scss/bootstrap';
