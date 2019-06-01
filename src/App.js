@@ -1,8 +1,9 @@
 import React from 'react';
 import './App.css';
-import Header from './Header';
-import Hero from './Hero';
-import Skills from './Skills';
+import Header from './Home/Header';
+import Hero from './Home/Hero/Hero';
+import Skills from './Home/Skills/Skills';
+import Intro from './Home/Intro/Intro';
 
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
@@ -14,6 +15,7 @@ function App() {
     <div>
       <Header />
       <Hero />
+      <Intro />
       <Skills />
     </div>
   );
