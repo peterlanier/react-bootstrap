@@ -86,8 +86,8 @@ export default class Skills extends Component {
         },
         {
             id: 17,
-            title: 'hacker news',
-            icon: 'hacker-news'
+            title: 'creative cloud',
+            icon: 'adobe'
         },
         {
             id: 18,
@@ -100,7 +100,7 @@ export default class Skills extends Component {
 
     render() {
         return (
-            <Container fluid={true} style={{ backgroundColor: '#343A3F' }}>
+            <Container fluid={true} className="skills" style={{ backgroundColor: '#343A3F' }}>
                 <div style={{ height: '40px' }} />
                 <div className="container">
                     <h1 className="text-center" style={{ fontWeight: 900, color: 'white' }}> languages + technologies </h1>

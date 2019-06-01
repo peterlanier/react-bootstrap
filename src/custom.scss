@@ -8,6 +8,13 @@ $c-charcoal: #7C9CAB;
 $body-color: #666;
 $navbar-dark-brand-color: $c-yellow;
 $navbar-dark-color: $c-yellow;
+$navbar-dark-hover-color: white;
+$navbar-dark-active-color: white;
+.skills svg:hover path,
+.navbar a:hover svg path,
+.navbar a:hover svg rect{
+    fill: $navbar-dark-hover-color;
+}
 
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono|Rubik+Mono+One&display=swap');
 
@@ -19,15 +26,21 @@ $navbar-dark-color: $c-yellow;
 //     background-size: contain;
 //     background-repeat: no-repeat;
 //     background-position: right;
-padding-top: 0px !important;
-padding-bottom: 0px !important;
-color: #343A3F;
-border-bottom: 10px solid $c-yellow;
-margin-bottom: 0px !important;
+    padding: 0px !important;
+    color: #343A3F;
+    border-bottom: 10px solid $c-yellow;
+    margin-bottom: 0px !important;
+
+}
+
+.charcoal {
+    color: $c-charcoal;
 }
 
 .yellow{
     color: $c-yellow;
 }
+
+
 
 @import '~bootstrap/scss/bootstrap';

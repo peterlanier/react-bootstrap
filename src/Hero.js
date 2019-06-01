@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import Particle from './Particle';
+import Jumbotron from 'react-bootstrap/Jumbotron';
 
 import ManSVG from './Man';
 
 export default class Hero extends Component {
     render() {
         return (
-            <div className="jumbotron jumbotron-fluid" style={{ position: 'relative' }}>
+            <Jumbotron style={{ position: 'relative' }}>
                 <Particle height={'450px'} />
                 <div style={{
                     position: "absolute",
@@ -22,7 +23,7 @@ export default class Hero extends Component {
                         <p className="lead" style={{textAlign: 'center'}}>full-stack & front-end UI/UX developer.</p>
                     </div>
                 </div>
-            </div>
+            </Jumbotron>
         )
     }
 }
