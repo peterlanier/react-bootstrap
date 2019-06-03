@@ -41,6 +41,8 @@ $navbar-dark-active-color: white;
     color: $c-yellow;
 }
 
-
+.dashboard a{
+    color: white !important;
+}
 
 @import '~bootstrap/scss/bootstrap';

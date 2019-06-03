@@ -4,6 +4,7 @@ import Header from './Home/Header';
 import Hero from './Home/Hero/Hero';
 import Skills from './Home/Skills/Skills';
 import Intro from './Home/Intro/Intro';
+import Dashboard from './Home/Dashboard/Dashboard';
 
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
@@ -15,7 +16,7 @@ function App() {
     <div>
       <Header />
       <Hero />
-      <Intro />
+      <Dashboard />
       <Skills />
     </div>
   );
