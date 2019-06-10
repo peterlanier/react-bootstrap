@@ -3,7 +3,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Nav from 'react-bootstrap/Nav';
-import Card from 'react-bootstrap/Card';
+import Movie from './Movie';
 
 export default class Dashboard extends Component {
     render() {
@@ -13,7 +13,7 @@ export default class Dashboard extends Component {
                     <Row style={{ height: '40px', backgroundColor: '#FEECC3' }}>
                         <Col>Howdy, User</Col>
                     </Row>
-                    <Row style={{ height: '500px' }}>
+                    <Row style={{ height: '500px', overflowY: 'scroll'}}>
                         <Col xs={2} style={{ backgroundColor: '#7C9CAB' }}>
                             <Nav defaultActiveKey="/home" className="flex-column">
                                 <Nav.Link eventKey="home">Movies</Nav.Link>
@@ -24,44 +24,7 @@ export default class Dashboard extends Component {
                         </Col>
                         <Col xs={10} style={{ backgroundColor: '#e4e4e4' }}>
                             <Row style={{paddingTop: '40px'}}>
-                                <Col>
-                                    <Card>
-                                        <Card.Img variant="top" src="https://picsum.photos/id/1013/200/100" />
-                                        <Card.Body>
-                                            <Card.Title>Card Title</Card.Title>
-                                            <Card.Text>
-                                                Some quick example text to build on the card title and make up the bulk of
-                                                the card's content.
-                                            </Card.Text>
-
-                                        </Card.Body>
-                                    </Card>
-                                </Col>
-                                <Col>
-
-                                    <Card>
-                                        <Card.Img variant="top" src="https://picsum.photos/id/1011/200/100" />
-                                        <Card.Body>
-                                            <Card.Title>Card Title</Card.Title>
-                                            <Card.Text>
-                                                Some quick example text to build on the card title and make up the bulk of
-                                                the card's content.
-                                            </Card.Text>
-
-                                        </Card.Body>
-                                    </Card></Col>
-                                <Col>
-                                    <Card>
-                                        <Card.Img variant="top" src="https://picsum.photos/id/1003/200/100" />
-                                        <Card.Body>
-                                            <Card.Title>Card Title</Card.Title>
-                                            <Card.Text>
-                                                Some quick example text to build on the card title and make up the bulk of
-                                                the card's content.
-                                            </Card.Text>
-
-                                        </Card.Body>
-                                    </Card></Col>
+                                <Movie />
                             </Row>
                         </Col>
                     </Row>
