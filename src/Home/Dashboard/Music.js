@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Card from 'react-bootstrap/Card';
 import CardGroup from 'react-bootstrap/CardGroup';
 import Col from 'react-bootstrap/Col';
+import Loading from './Loading';
 
 export default class Music extends Component {
     constructor() {
@@ -52,35 +53,36 @@ export default class Music extends Component {
 
         return (
             <React.Fragment>
-                <h1 className={'pl-3'}>My Music</h1>
-                <CardGroup>
                     {console.log(movies, isLoading)}
                     {error ? console.log(error.message) : null}
                     {!isLoading ? (
+                        <>
+                        <h1 className={'pl-3'}>My Music</h1>
+                        <CardGroup>
+                            {movies.map((movie, i) => {
+                                const { images } = movie;
+                                return (
+                                    <Col key={i} sm={6} md={3}>
+                                        <Card className={'mb-4'}>
+                                            <Card.Img variant="top" src={images[0].image} />
+                                            <Card.Body>
+                                                <Card.Title>{this.dataFill[i].name}</Card.Title>
+                                                <Card.Subtitle className="mb-2 text-muted">{this.dataFill[i].album}</Card.Subtitle>
+                                                <Card.Text>
+                                                    <br />
+                                                </Card.Text>
 
-                        movies.map((movie, i) => {
-                            const { images } = movie;
-                            return (
-                                <Col key={i} sm={6} md={3}>
-                                    <Card className={'mb-4'}>
-                                        <Card.Img variant="top" src={images[0].image} />
-                                        <Card.Body>
-                                            <Card.Title>{this.dataFill[i].name}</Card.Title>
-                                            <Card.Subtitle className="mb-2 text-muted">{this.dataFill[i].album}</Card.Subtitle>
-                                            <Card.Text>
-                                                <br />
-                                            </Card.Text>
-
-                                        </Card.Body>
-                                    </Card>
-                                </Col>
-                            );
-                        })
-
+                                            </Card.Body>
+                                        </Card>
+                                    </Col>
+                                );
+                            })}
+                        </CardGroup>
+                        </>
                     ) : (
-                        <div>Loading...</div>
+                        <Loading />
                     )}
-                </CardGroup>
+                
             </React.Fragment>
         );
     }

@@ -3,10 +3,12 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Nav from 'react-bootstrap/Nav';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Movies from './Movies';
 import Shows from './Shows';
 import Music from './Music';
 import Books from './Books';
+import { faUser } from '@fortawesome/free-solid-svg-icons'
 
 export default class Dashboard extends Component {
     constructor(){
@@ -29,10 +31,10 @@ export default class Dashboard extends Component {
         return (
             <Container style={{ paddingTop: '40px', paddingBottom: '40px' }}>
                 <Container className="dashboard">
-                    <Row style={{ height: '40px', backgroundColor: '#FEECC3' }}>
-                        <Col>Howdy, User</Col>
+                    <Row className={'topbar text-right'} style={{  backgroundColor: '#FEECC3' }}>
+                        <Col>Howdy, me&nbsp;&nbsp;<FontAwesomeIcon icon={faUser} /></Col>
                     </Row>
-                    <Row style={{ height: '500px'}}>
+                    <Row className={'sidebar'} style={{ height: '500px'}}>
                         <Col xs={2} style={{ backgroundColor: '#7C9CAB' }}>
                             <Nav defaultActiveKey="/home" className="flex-column">
                                 <Nav.Link eventKey="home" onClick={()=>this.showHide(0)}>Movies</Nav.Link>
@@ -42,12 +44,11 @@ export default class Dashboard extends Component {
                             </Nav>
                         </Col>
                         <Col xs={10} style={{ backgroundColor: '#e4e4e4' }}>
-                            <Row style={{paddingTop: '40px', height: '500px', overflowY: 'scroll'}}>
+                            <Row style={{height: '500px', overflowY: 'scroll'}}>
                                 {!this.state.isHidden[0] && <Movies />}
                                 {!this.state.isHidden[1] && <Music />}
                                 {!this.state.isHidden[2] && <Shows />}
                                 {!this.state.isHidden[3] && <Books />}
-
                             </Row>
                         </Col>
                     </Row>

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Card from 'react-bootstrap/Card';
 import CardGroup from 'react-bootstrap/CardGroup';
 import Col from 'react-bootstrap/Col';
+import Loading from './Loading';
 
 export default class Shows extends Component {
     constructor() {
@@ -53,12 +54,13 @@ export default class Shows extends Component {
 
         return (
             <React.Fragment>
-                <h1 className={'pl-3'}>My Shows</h1>
-                <CardGroup>
+
                     {error ? console.log(error.message) : null}
                     {!isLoading ? (
-
-                        shows.map(show => {
+                        <>
+                        <h1 className={'pl-3'}>My Shows</h1>
+                        <CardGroup>
+                        {shows.map(show => {
                             const { Title, Poster, Year, Runtime } = show;
                             return (
                                 <Col key={Title} sm={6} md={3}>
@@ -74,12 +76,13 @@ export default class Shows extends Component {
                                     </Card>
                                 </Col>
                             );
-                        })
-
+                        })}
+                        </CardGroup>
+                        </>
                     ) : (
-                            <h3>Loading...</h3>
+                            <Loading />
                         )}
-                </CardGroup>
+                
             </React.Fragment>
         );
     }

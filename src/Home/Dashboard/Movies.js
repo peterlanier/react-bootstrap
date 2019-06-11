@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Card from 'react-bootstrap/Card';
 import CardGroup from 'react-bootstrap/CardGroup';
 import Col from 'react-bootstrap/Col';
+import Loading from './Loading';
 
 export default class Movies extends Component {
     constructor() {
@@ -57,13 +58,14 @@ export default class Movies extends Component {
 
         return (
             <React.Fragment>
-                <h1 className={'pl-3'}>My Movies</h1>
-                <CardGroup>
+                
                     {console.log(movies, isLoading)}
                     {error ? console.log(error.message) : null}
                     {!isLoading ? (
-
-                        movies.map(movie => {
+                        <>
+                        <h1 className={'pl-3'}>My Movies</h1>
+                        <CardGroup>
+                        {movies.map(movie => {
                             const { Title, Poster, Year, Director, Runtime } = movie;
                             return (
                                 <Col key={Title} sm={6} md={3}>
@@ -80,12 +82,13 @@ export default class Movies extends Component {
                                     </Card>
                                 </Col>
                             );
-                        })
-
+                        })}
+</CardGroup>
+</>
                     ) : (
-                            <h3>Loading...</h3>
+                        <Loading />
                         )}
-                </CardGroup>
+                
             </React.Fragment>
         );
     }
